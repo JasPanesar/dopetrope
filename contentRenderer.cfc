@@ -184,8 +184,6 @@ component extends="mura.cfobject" output="false" {
 				}
 			}
 
-			local.it.reset();
-
 			return str;
 		}
 

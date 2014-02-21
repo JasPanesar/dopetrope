@@ -42,7 +42,7 @@
 						<div>
 							#$.columnizeFeed(
 								feedName=$.content('homeFeature1Feed')
-								, maxItems=$.content('homeFeature1MaxItems')
+								, maxItems=Val($.content('homeFeature1MaxItems'))
 								, columnCount=Val($.content('homeFeature1ColumnCount'))
 								, readMoreText=$.content('homeFeature1ReadMoreText')
 								, showDate=YesNoFormat($.content('homeFeature1ShowDate'))
@@ -51,6 +51,7 @@
 							)#
 						</div>
 					</section>
+				<!-- // Home Feature 1 Area -->
 
 			</div><!-- // 12u // -->
 		</div><!-- // row // -->
@@ -58,9 +59,9 @@
 		<div class="row">
 			<div class="12u">
 
-				<!-- Blog -->
+				<!-- Home Feature 2 Area -->
 					<section>
-						<cfif Len($.content('homeFeature1Heading'))>
+						<cfif Len($.content('homeFeature2Heading'))>
 							<header class="major">
 								<h2>#$.renderEditableAttribute(attribute='homeFeature2Heading', label='Feature 2 Heading')#</h2>
 							</header>
@@ -68,7 +69,7 @@
 						<div>
 							#$.columnizeFeed(
 								feedName=$.content('homeFeature2Feed')
-								, maxItems=$.content('homeFeature2MaxItems')
+								, maxItems=Val($.content('homeFeature2MaxItems'))
 								, columnCount=Val($.content('homeFeature2ColumnCount'))
 								, readMoreText=$.content('homeFeature2ReadMoreText')
 								, showDate=YesNoFormat($.content('homeFeature2ShowDate'))
@@ -77,6 +78,7 @@
 							)#
 						</div>
 					</section>
+				<!-- // Home Feature 2 Area // -->
 
 	#$.dspThemeInclude('templates/inc/footer.cfm')#
 </cfoutput>
