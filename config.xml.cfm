@@ -12,8 +12,7 @@
 	</imagesizes>
 
 	<extensions>
-		<!--- <cfinclude template="class_extensions/definitions/pageHome.cfm" />
-		<cfinclude template="class_extensions/definitions/componentSpotlight.cfm" /> --->
+		<cfinclude template="class_extensions/definitions/pageHome.cfm" />
 		<cfinclude template="class_extensions/definitions/componentRSSFeed.cfm" />
 		<cfinclude template="class_extensions/definitions/componentArticleList.cfm" />
 		<cfinclude template="class_extensions/definitions/componentWithHeadingAndButtonLink.cfm" />

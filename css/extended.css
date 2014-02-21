@@ -5,28 +5,30 @@
 		- this is where custom overrides to both the original theme and Mura CMS styling is added
 */
 
-ol.linenums {
-	list-style-type: decimal;
-}
+/* Prettyprint */
+	ol.linenums {
+		list-style-type: decimal;
+	}
 
 /* Section Box */
-	section.box p:last-child {
+	.box .image:not(.image-full) {
+		margin: 0 0 1em 0;
+	}
+
+	.box p:last-child {
 		margin-bottom: 0;
 	}
 	.box ul:last-child {
 		margin-bottom: 0;
+	}
+	.box .byline {
+		clear:both;
 	}
 
 	#footer .box {
 		background: none;
 		border: none;
 		padding: 0;
-	}
-
-	#footer .box .image-full {
-		margin: 0 0 2em 0;
-		left: auto;
-		top: auto;
 	}
 
 /* .is-post theme overrides */
@@ -40,11 +42,11 @@ ol.linenums {
 		margin: 0 0 1em 0;
 	}
 
-
-nav ul ul {
-	margin-left: 1em;
-	margin-bottom: 0;
-}
+/* nav */
+	nav ul ul {
+		margin-left: 1em;
+		margin-bottom: 0;
+	}
 
 /* pagination */
 	ul.navSequential li.current a.current {
@@ -52,6 +54,9 @@ nav ul ul {
 	}
 
 /* Comments */
+	.mura-comments {
+		margin-top: 2em;
+	}
 	.mura-comment-thumb img {
 		/*border-radius: 8px;*/
 	}
@@ -102,17 +107,6 @@ nav ul ul {
 		/*border-radius: 8px;*/
 	}
 
-
-/* Mura Editable Objects */
-/*span.editableObject footer {
-	margin-bottom: 5em;
-}
-span.editableObject:last-child footer {
-	margin-bottom: 0;
-}*/
-
-
-
 /* Sidebar */
 	.sidebar span.editableObject {
 		margin-bottom: 2.5em;
@@ -157,24 +151,15 @@ span.editableObject:last-child footer {
 	}
 
 /* Forms */
-
-		form
-		{
-		}
+		form {}
 
 			form legend {
 				font-weight: bold;
 				padding:1em 0 0.5em 0;
 				font-size: 1.2em;
 			}
-		
-			form .actions
-			{
-				margin-bottom: 0;
-			}
 			
-			form label
-			{
+			form label {
 				display: block;
 			}
 
@@ -182,8 +167,7 @@ span.editableObject:last-child footer {
 			form input[type='text'],
 			form input[type='password'],
 			form select,
-			form textarea
-			{
+			form textarea {
 				display: block;
 				box-shadow: inset 0 0 0 1px #e6e6e6;
 				background: #f8f8f8;
@@ -213,72 +197,31 @@ span.editableObject:last-child footer {
 				form input.text,
 				form input[type='text'],
 				form input[type='password'],
-				form select
-				{
+				form select {
 					line-height: 1.25em;
 				}
 
-				form .select
-				{
-					position: relative;
-				}
-				
-					form .select select
-					{
-						text-indent: 0.01px;
-						text-overflow: '';
-   					}
-				
-					form .select:before
-					{
-						content: '';
-						position: absolute;
-						top: 15%;
-						right: 1em;
-						width: 1.25em;
-						height: 75%;
-						background: url('images/arrow.svg') center center no-repeat;
-						background-size: contain;
-						z-index: 1;
-					}
-
-						form .select select::-ms-expand
-						{
-							display: none;
-						}
-
-						.dark form .select:before
-						{
-							background: url('images/dark-arrow.svg') center center no-repeat;
-							background-size: contain;
-						}
-
 				form input.text:focus,
 				form select:focus,
-				form textarea:focus
-				{
+				form textarea:focus {
 					outline: 0;
 					box-shadow: inset 0 0 0 1px #afd9e0;
 					background: #fcfcfc;
 				}
 
-			form textarea
-			{
+			form textarea {
 				min-height: 13em;
 			}
 			
-			form select
-			{
+			form select {
 				position: relative;
 			}
 			
-				form select option
-				{
+				form select option {
 					color: #000;
 				}
 			
-			form ::-moz-focus-inner
-			{
+			form ::-moz-focus-inner {
 				border: 0;
 			}
 

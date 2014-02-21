@@ -23,7 +23,7 @@
 
 		<!--- Header Image (if below heading) --->
 			<cfif Len(img) and $.component('compHeaderImagePlacement') eq 'below'>
-				<a href="#href#" class="image image-full">
+				<a href="#href#" class="image">
 					<img src="#img#" alt="#HTMLEditFormat($.setDynamicContent($.component('compHeading')))#" />
 				</a>
 			</cfif>

@@ -76,14 +76,6 @@ component extends="mura.cfobject" output="false" {
 		}
 
 		// used in the common footer
-			public any function onComponentSpotlightBodyRender($) {
-				var str = '';
-				savecontent variable='str' {
-					WriteOutput(arguments.$.dspThemeInclude('class_extensions/display/componentSpotlight.cfm'));
-				}
-				return str;
-			}
-
 			public any function onComponentArticleListBodyRender($) {
 				var str = '';
 				savecontent variable='str' {

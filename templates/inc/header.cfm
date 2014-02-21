@@ -1,5 +1,5 @@
 <!---
-This file is part of the Dopetrope Mura CMS Theme
+	This file is part of the Dopetrope Mura CMS Theme
 --->
 <cfoutput>
 	<!-- Header Wrapper -->
@@ -54,86 +54,8 @@ This file is part of the Dopetrope Mura CMS Theme
 					</div>
 				</div>
 
-
-				<!-- Banner -->
-				<cfif $.content('filename') eq ''>
-
-					<div class="row">
-						<div class="12u">
-
-							<!-- Banner -->
-								<section id="banner">
-									<!--- <a href="http://facebook.com/DreametryDoodle"> --->
-										<span class="image image-full">
-											<img src="#$.siteConfig('themeAssetPath')#/images/pic01.jpg" alt="" />
-										</span>
-										<header>
-											<h2>Howdy. This is Dopetrope.</h2>
-											<span class="byline">
-												A responsive template by HTML5 UP for Mura CMS
-											</span>
-										</header>
-									<!--- </a> --->
-								</section>
-
-						</div>
-					</div>
-					<div class="row">
-						<div class="12u">
-								
-							<!-- Intro -->
-								<section id="intro">
-								
-									<div>
-										<div class="row">
-											<div class="4u">
-												<section class="first">
-													<span class="pennant">
-														<span class="fa fa-cog"></span>
-													</span>
-													<header>
-														<h2>Ipsum consequat</h2>
-													</header>
-													<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
-												</section>
-											</div>
-											<div class="4u">
-												<section class="middle">
-													<span class="pennant pennant-alt">
-														<span class="fa fa-flash"></span>
-													</span>
-													<header>
-														<h2>Magna etiam dolor</h2>
-													</header>
-													<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
-												</section>
-											</div>
-											<div class="4u">
-												<section class="last">
-													<span class="pennant pennant-alt2">
-														<span class="fa fa-star"></span>
-													</span>
-													<header>
-														<h2>Tempus adipiscing</h2>
-													</header>
-													<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
-												</section>
-											</div>
-										</div>
-									</div>
-
-									<div class="actions">
-										<a href="##" class="button big">Get Started</a>
-										<a href="##" class="button alt big">Learn More</a>
-									</div>
-								
-								</section>
-
-						</div>
-					</div>
-
-				</cfif>
-				<!-- // Banner // -->
+				<!--- Home Page Header --->
+				#$.dspThemeInclude('class_extensions/display/home/homeHeader.cfm')#
 
 			</div>
 		</div>

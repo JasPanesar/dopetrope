@@ -20,8 +20,12 @@ component extends="mura.cfobject" output="false" {
 
 		// nav
 			this.ulTopClass = '';
-			this.navWrapperClass = 'box';
-			this.tagCloudWrapperClass = 'box';
+
+		// wrappers
+			this.generalWrapperClass = 'box';
+			this.navWrapperClass = this.generalWrapperClass;
+			this.tagCloudWrapperClass = this.generalWrapperClass;
+			//this.userToolsWrapperClass = this.generalWrapperClass;
 		
 		// headings
 			this.headline = 'h1';
@@ -89,6 +93,49 @@ component extends="mura.cfobject" output="false" {
 					: 'No Content Collections Exist!';
 			}
 
+
+
+	// SPEAKERS
+
+		// getSpeakersOptionList (value stored by Mura)
+		public any function getSpeakersOptionList() {
+			var it = getSpeakersIterator();
+			var item = '';
+			var optionList = '';
+
+			While(it.hasNext()) {
+				item = it.next();
+				optionList = ListAppend(optionList, item.getURL(), '^');
+			};
+
+			return optionList;
+		}
+
+		// getSpeakersOptionLabelList (label displayed to User)
+		public any function getSpeakersOptionLabelList() {
+			var rs = getSpeakersQuery();
+			return ValueList(rs.title,'^');
+		}
+
+		// getSpeakersFeed
+		public any function getSpeakersFeed(feedName='From Our Blog') {
+			return variables.$.getBean('feed').loadBy(name=arguments.feedName);
+		}
+
+		// getSpeakersQuery
+		public any function getSpeakersQuery() {
+			return getSpeakersFeed().getQuery();
+		}
+
+		// getSpeakersIterator
+		public any function getSpeakersIterator() {
+			return getSpeakersFeed().getIterator();
+		}
+
+		// @END Speakers
+
+
+
 	// Helper
 		public any function dspComponent(string componentid) {
 			var bean = IsValid('uuid', arguments.componentid)
@@ -106,6 +153,40 @@ component extends="mura.cfobject" output="false" {
 
 		public any function dspNoItemsNotice() {
 			return '<h3>No items exist yet.</h3>';
+		}
+
+		public any function columnizeFeed(
+			string feedName=''
+			, numeric maxItems=6
+			, numeric columnCount=3
+			, string readMoreText='Learn More'
+			, boolean showDate=false
+			, boolean showCredits=false
+			, boolean showCommentCount=false
+		) {
+			var local = {};
+			local.item = '';
+			local.str = '';
+			local.feed = variables.$.getBean('feed').loadBy(name=arguments.feedName).setMaxItems(Val(arguments.maxItems)).setNextN(Val(arguments.maxItems));
+			local.it = local.feed.getIterator();
+			local.totalItems = it.getRecordcount();
+			local.itemsPerRow = Val(arguments.columnCount);
+			local.itemsPerColumn = Round(totalItems/itemsPerRow);
+			local.columnClass = Round(12/arguments.columnCount) & 'u';
+
+			savecontent variable="str" {
+				if ( feed.getIsNew() ) {
+					WriteOutput(dspNoFeedNotice(feedName=arguments.feedName));
+				} else if ( !totalItems ) {
+					WriteOutput(dspNoItemsNotice());
+				} else {
+					include 'class_extensions/display/home/homeFeeds.cfm';
+				}
+			}
+
+			local.it.reset();
+
+			return str;
 		}
 
 }
