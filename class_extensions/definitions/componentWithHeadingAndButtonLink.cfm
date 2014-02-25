@@ -2,6 +2,7 @@
 	This file is part of the Dopetrope Mura CMS Theme
 --->
 <extension type="Component" subType="WithHeadingAndButtonLink">
+
 	<attributeset name="Other Options" container="Basic">
 
 		<!-- Header Image -->
@@ -69,18 +70,6 @@
 				message=""
 				optionList=""
 				optionLabelList="" />
-			<!--- <attribute 
-				name="compButtonIcon"
-				label="Link Button Icon Class"
-				hint="Use any Font Awesome Icon Class (http://fontawesome.io/icons/)"
-				type="textbox"
-				defaultValue=""
-				required="false"
-				validation=""
-				regex=""
-				message=""
-				optionList=""
-				optionLabelList="" /> --->
 			<attribute 
 				name="compButtonStyle"
 				label="Link Button Style"
@@ -93,6 +82,8 @@
 				message=""
 				optionList="normal^alt"
 				optionLabelList="Normal^Alternative" />
-		<!-- // Button Link // -->
+
 	</attributeset>
+	<!-- // Other Options // -->
+
 </extension>

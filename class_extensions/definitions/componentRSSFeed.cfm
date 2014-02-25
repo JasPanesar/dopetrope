@@ -2,7 +2,10 @@
 	This file is part of the Dopetrope Mura CMS Theme
 --->
 <extension type="Component" subType="RSSFeed" hasBody="0">
+
 	<attributeset name="RSS Feed Info" container="Basic">
+
+		<!-- Heading -->
 		<attribute 
 			name="rssFeedHeading"
 			label="RSS Heading / Title"
@@ -15,6 +18,8 @@
 			message=""
 			optionList=""
 			optionLabelList="" />
+
+		<!-- Link -->
 		<attribute 
 			name="rssFeedLink"
 			label="RSS Link URL (including http://)"
@@ -27,6 +32,8 @@
 			message="Please enter a RSS Link URL"
 			optionList=""
 			optionLabelList="" />
+
+		<!-- Show Summary? -->
 		<attribute 
 			name="rssFeedShowSummary"
 			label="Show Item Summary?"
@@ -39,6 +46,8 @@
 			message=""
 			optionList="true^false"
 			optionLabelList="Yes^No" />
+
+		<!-- Show PubDate? -->
 		<attribute 
 			name="rssFeedShowPubDate"
 			label="Show Item Publication Date?"
@@ -51,6 +60,8 @@
 			message=""
 			optionList="true^false"
 			optionLabelList="Yes^No" />
+
+		<!-- Max Items -->
 		<attribute 
 			name="rssFeedMaxItems"
 			label="Max Items To Display"
@@ -64,4 +75,6 @@
 			optionList="1^2^3^4^5^6^7^8^9^10"
 			optionLabelList="1^2^3^4^5^6^7^8^9^10" />
 	</attributeset>
+	<!-- // RSS Feed Info // -->
+
 </extension>

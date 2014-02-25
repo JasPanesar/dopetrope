@@ -12,10 +12,8 @@
 			<div>
 				<div class="row">
 					<div class="12u skel-cell-important">
-						
 						<!-- Content -->
 						#$.dspThemeInclude('templates/inc/body.cfm')#
-
 					</div>
 				</div>
 			</div>

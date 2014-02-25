@@ -3,6 +3,7 @@
 
 	Notes:
 		* Custom Image Sizes + Class Extensions required for this theme.
+		* Feel free to rename this file or comment out the nodes below once this file has been parsed by Mura.
 -->
 <theme>
 

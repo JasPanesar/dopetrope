@@ -2,7 +2,10 @@
 	This file is part of the Dopetrope Mura CMS Theme
 --->
 <extension type="Component" subType="ArticleList" hasBody="0">
+
 	<attributeset name="Article List Info" container="Basic">
+
+		<!-- Heading -->
 		<attribute 
 			name="articleListHeading"
 			label="Article List Heading/Title"
@@ -15,6 +18,8 @@
 			message=""
 			optionList=""
 			optionLabelList="" />
+
+		<!-- Feed -->
 		<attribute 
 			name="articleListFeed"
 			label="Article Listing Content Collection/Local Index Feed Name"
@@ -27,6 +32,8 @@
 			message=""
 			optionList="[mura]$.getLocalFeedNames()[/mura]"
 			optionLabelList="[mura]$.getLocalFeedNames()[/mura]" />
+
+		<!-- Show Image? -->
 		<attribute 
 			name="articleListShowImage"
 			label="Show Associated Image?"
@@ -39,6 +46,8 @@
 			message=""
 			optionList="true^false"
 			optionLabelList="Yes^No" />
+
+		<!-- Max Items -->
 		<attribute 
 			name="articleListMaxItems"
 			label="Max Items To Display"
@@ -52,4 +61,6 @@
 			optionList="1^2^3^4^5^6^7^8^9^10"
 			optionLabelList="1^2^3^4^5^6^7^8^9^10" />
 	</attributeset>
+	<!-- // Article List Info // -->
+
 </extension>

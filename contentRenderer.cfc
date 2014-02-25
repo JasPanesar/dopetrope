@@ -16,7 +16,7 @@ component extends="mura.cfobject" output="false" {
 			this.jsLib = 'jquery';
 			this.jsLibLoaded = true;
 			this.suppressWhitespace = false;
-			this.showInlineEditor=true;
+			//this.showInlineEditor=true;
 
 		// nav
 			this.ulTopClass = '';
@@ -33,7 +33,6 @@ component extends="mura.cfobject" output="false" {
 			this.subHead2 = 'h3';
 			this.subHead3 = 'h4';
 			this.subHead4 = 'h5';
-
 
 		// buttons
 			this.customButtonClass = 'button';
@@ -93,50 +92,7 @@ component extends="mura.cfobject" output="false" {
 					: 'No Content Collections Exist!';
 			}
 
-
-
-	// SPEAKERS
-
-		// getSpeakersOptionList (value stored by Mura)
-		public any function getSpeakersOptionList() {
-			var it = getSpeakersIterator();
-			var item = '';
-			var optionList = '';
-
-			While(it.hasNext()) {
-				item = it.next();
-				optionList = ListAppend(optionList, item.getURL(), '^');
-			};
-
-			return optionList;
-		}
-
-		// getSpeakersOptionLabelList (label displayed to User)
-		public any function getSpeakersOptionLabelList() {
-			var rs = getSpeakersQuery();
-			return ValueList(rs.title,'^');
-		}
-
-		// getSpeakersFeed
-		public any function getSpeakersFeed(feedName='From Our Blog') {
-			return variables.$.getBean('feed').loadBy(name=arguments.feedName);
-		}
-
-		// getSpeakersQuery
-		public any function getSpeakersQuery() {
-			return getSpeakersFeed().getQuery();
-		}
-
-		// getSpeakersIterator
-		public any function getSpeakersIterator() {
-			return getSpeakersFeed().getIterator();
-		}
-
-		// @END Speakers
-
-
-
-	// Helper
+	// Helpers
 		public any function dspComponent(string componentid) {
 			var bean = IsValid('uuid', arguments.componentid)
 				? variables.$.getBean('content').loadBy(contentid=arguments.componentid)
@@ -167,7 +123,10 @@ component extends="mura.cfobject" output="false" {
 			var local = {};
 			local.item = '';
 			local.str = '';
-			local.feed = variables.$.getBean('feed').loadBy(name=arguments.feedName).setMaxItems(Val(arguments.maxItems)).setNextN(Val(arguments.maxItems));
+			local.feed = variables.$.getBean('feed')
+				.loadBy(name=arguments.feedName)
+				.setMaxItems(Val(arguments.maxItems))
+				.setNextN(Val(arguments.maxItems));
 			local.it = local.feed.getIterator();
 			local.totalItems = it.getRecordcount();
 			local.itemsPerRow = Val(arguments.columnCount);

@@ -18,10 +18,10 @@
 
 		<!--- Title + Credits (byline) --->	
 			<header>
-				<h2>#HTMLEditFormat($.content('title'))#</h2>
+				<h2>#$.renderEditableAttribute(attribute='title', label='Page Title')#</h2>
 				<cfif Len($.content('credits'))>
 					<span class="byline">
-						#HTMLEditFormat($.content('credits'))#
+						#$.renderEditableAttribute(attribute='credits', label='Credits')#
 					</span>
 				</cfif>
 			</header>

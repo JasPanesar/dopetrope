@@ -16,7 +16,10 @@ component extends="mura.cfobject" output="false" {
 		// make sure 'Home' page set to 'Page/Home'
 		var homeBean = arguments.$.getBean('content').loadBy(filename='');
 		if ( homeBean.getValue('subType') != 'Home' ) {
-			homeBean.setValue('subType', 'Home').setValue('template', 'home.cfm').save();
+			homeBean
+				.setValue('subType', 'Home')
+				.setValue('template', 'home.cfm')
+				.save();
 		}
 
 	}

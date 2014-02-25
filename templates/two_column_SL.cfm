@@ -14,20 +14,17 @@
 
 					<!-- Sidebar -->
 						<div class="sidebar 4u">
-
 							<!--- Left Column Content Display Objects --->
 							#$.dspObjects(1)#
-
 						</div>
 					<!-- // Sidebar // -->
 
 					<!-- Content -->
 					<div class="8u skel-cell-important">
-						
 						<!-- Main Content / Body -->
 						#$.dspThemeInclude('templates/inc/body.cfm')#
-
 					</div>
+
 				</div>
 			</div>
 		</section>

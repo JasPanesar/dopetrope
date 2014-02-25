@@ -11,7 +11,13 @@
 				</#$.getHeaderTag('subHead1')#>
 			</header>
 		</cfif>
-		<cffeed source="#$.component('rssFeedLink')#" query="rs" />
+		<cftry>
+			<cffeed source="#$.component('rssFeedLink')#" query="rs" />
+			<cfcatch>
+				<cfset rs = QueryNew('') />
+			</cfcatch>
+		</cftry>
+			
 		<cfset it = $.getBean('beanIterator').setQuery(rs) />
 		<cfset maxItems = Val($.component('rssFeedMaxItems')) />
 

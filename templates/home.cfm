@@ -31,7 +31,6 @@
 				<div class="12u">
 		</cfif>
 
-
 				<!-- Home Feature 1 Area -->
 					<section>
 						<cfif Len($.content('homeFeature1Heading'))>
