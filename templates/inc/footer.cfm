@@ -20,39 +20,7 @@ This file is part of the Dopetrope Mura CMS Theme
 
 						<!--- Latest News --->
 						<div class="8u">
-
-							<!--- <section>
-								<header>
-									<h2>Latest News</h2>
-								</header>
-								<cfscript>
-									feed = $.getBean('feed').loadBy(name='Latest News').setMaxItems(4);
-									it = feed.getIterator();
-								</cfscript>
-								<cfif feed.getIsNew()>
-									#$.dspNoFeedNotice()#
-								<cfelseif it.hasNext()>
-									<ul class="dates">
-										<cfloop condition="it.hasNext()">
-											<cfset item = it.next() />
-											<li>
-												<cfset theDate = IsValid('date', item.getValue('releaseDate'))
-													? item.getValue('releaseDate')
-													: item.getValue('lastUpdate') />
-												<span class="date">
-													#DateFormat(theDate, 'mmm')# <strong>#Day(theDate)#</strong>
-												</span>
-												<h3><a href="#item.getValue('url')#">#HTMLEditFormat(item.getValue('menuTitle'))#</a></h3>
-												#item.getValue('summary')#
-											</li>
-										</cfloop>
-									</ul>
-								<cfelse>
-									#$.dspNoItemsNotice()#
-								</cfif>
-							</section> --->
 							#$.dspComponent('[ Footer ] RSS Feed')#
-						
 						</div>
 
 						<!--- What's this all about? --->
