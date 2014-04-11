@@ -23,7 +23,7 @@
 		<attribute 
 			name="articleListFeed"
 			label="Article Listing Content Collection/Local Index Feed Name"
-			hint="Enter the name of the Local Content Collection/Index to use"
+			hint="Select the name of the Local Content Collection/Index to use"
 			type="selectbox"
 			defaultValue="[mura]ListFirst($.getLocalFeedNames(), '^')[/mura]"
 			required="false"

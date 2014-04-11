@@ -40,7 +40,7 @@
 							<a href="#item.getValue('rsslink')#">
 								#HTMLEditFormat(item.getValue('title'))#
 							</a>
-						</#$.getHeaderTag('subHead1')#>
+						</#$.getHeaderTag('subHead2')#>
 
 						<!--- Summary --->
 						<cfif YesNoFormat($.component('rssFeedShowSummary'))>

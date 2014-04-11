@@ -14,6 +14,7 @@
 		<title>#HTMLEditFormat($.siteConfig('site'))# - #HTMLEditFormat($.content('title'))#</title>
 		<meta name="description" content="#HTMLEditFormat($.content('metaDesc'))#" />
 		<meta name="keywords" content="#HTMLEditFormat($.content('metaKeywords'))#" />
+		<link rel="icon" href="#$.siteConfig('assetPath')#/images/favicon.ico" type="image/x-icon" />
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet" />
 
 		<!-- Mura CSS -->
