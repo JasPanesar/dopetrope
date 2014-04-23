@@ -341,7 +341,7 @@ This file is part of the Dopetrope Mura CMS Theme
 		<!-- Feature 1 : Columns -->
 			<attribute 
 				name="homeFeature1ColumnCount"
-				label="Feature Area 1 ## Columns"
+				label="Feature Area 1 # Columns"
 				hint="Select the number of columns you wish to split the items into"
 				type="selectbox"
 				defaultValue="3"
@@ -457,7 +457,7 @@ This file is part of the Dopetrope Mura CMS Theme
 		<!-- Feature 2 : Column Count -->
 			<attribute 
 				name="homeFeature2ColumnCount"
-				label="Feature Area 2 ## Columns"
+				label="Feature Area 2 # Columns"
 				hint="Select the number of columns you wish to split the items into"
 				type="selectbox"
 				defaultValue="2"
