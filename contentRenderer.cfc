@@ -12,7 +12,7 @@ component extends="mura.cfobject" output="false" {
 	*/
 
 	// contentRenderer settings
-		// GENERAL 
+		// GENERAL
 			this.jsLib = 'jquery';
 			this.jsLibLoaded = true;
 			this.suppressWhitespace = false;
@@ -26,7 +26,7 @@ component extends="mura.cfobject" output="false" {
 			this.navWrapperClass = this.generalWrapperClass;
 			this.tagCloudWrapperClass = this.generalWrapperClass;
 			//this.userToolsWrapperClass = this.generalWrapperClass;
-		
+
 		// headings
 			this.headline = 'h1';
 			this.subHead1 = 'h2';
@@ -69,7 +69,7 @@ component extends="mura.cfobject" output="false" {
 	// class extension specific methods
 		// helper for RSS Feeds
 			public any function convertFeedDateTime(string httpDateTime) {
-				return IsDate(arguments.httpDateTime) 
+				return IsDate(arguments.httpDateTime)
 					? LSDateFormat(ParseDateTime(arguments.httpDateTime), 'long')
 					: 'invalid';
 			}
@@ -82,8 +82,8 @@ component extends="mura.cfobject" output="false" {
 
 			public any function getLocalFeedNames() {
 				var rs = getLocalFeeds();
-				return rs.getRecordcount() 
-					? ValueList(rs.name, '^') 
+				return rs.getRecordcount()
+					? ValueList(rs.name, '^')
 					: 'No Content Collections Exist!';
 			}
 
@@ -122,7 +122,7 @@ component extends="mura.cfobject" output="false" {
 			local.it = local.feed.getIterator();
 			local.totalItems = it.getRecordcount();
 			local.itemsPerRow = Val(arguments.columnCount);
-			local.itemsPerColumn = Round(totalItems/itemsPerRow);
+			local.itemsPerColumn = itemsPerRow ? Round(totalItems/itemsPerRow) : 0;
 			local.columnClass = Round(12/arguments.columnCount) & 'u';
 
 			savecontent variable="str" {
