@@ -123,7 +123,7 @@ component extends="mura.cfobject" output="false" {
 			local.totalItems = it.getRecordcount();
 			local.itemsPerRow = Val(arguments.columnCount);
 			local.itemsPerColumn = itemsPerRow ? Round(totalItems/itemsPerRow) : 0;
-			local.columnClass = Round(12/arguments.columnCount) & 'u';
+			local.columnClass = arguments.columnCount ? Round(12/arguments.columnCount) & 'u' : 0;
 
 			savecontent variable="str" {
 				if ( feed.getIsNew() ) {
