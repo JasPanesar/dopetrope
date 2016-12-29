@@ -7,21 +7,21 @@
 			<div class="container">
 				<div class="row">
 					<div class="12u">
-					
+
 						<!-- Header -->
 							<section id="header">
-								
+
 								<!-- Logo -->
 									<h1>
 										<a href="#$.createHREF(filename='')#">
 											#HTMLEditFormat($.siteConfig('site'))#
 										</a>
 									</h1>
-								
+
 								<!-- Nav -->
 									<cf_CacheOMatic key="dspPrimaryNav#$.content('contentid')#">
 										<nav id="nav">
-											<!--- 
+											<!---
 												For information on dspPrimaryNav(), visit:
 												http://docs.getmura.com/v6/front-end/template-variables/document-body/
 											--->
@@ -30,7 +30,7 @@
 												, id='navPrimary'
 												, class=''
 												, displayHome='always'
-												, closeFolders=true 
+												, closeFolders=true
 												, showCurrentChildrenOnly=false
 												, liHasKidsClass='dropdown'
 												, liHasKidsAttributes=''
@@ -55,7 +55,7 @@
 				</div>
 
 				<!--- Home Page Header --->
-				#$.dspThemeInclude('class_extensions/display/home/homeHeader.cfm')#
+				#$.dspThemeInclude('content_types/page_home/includes/homeHeader.cfm')#
 
 			</div>
 		</div>

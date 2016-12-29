@@ -17,6 +17,10 @@ component extends="mura.cfobject" output="false" {
 			this.jsLibLoaded = true;
 			this.suppressWhitespace = false;
 			//this.showInlineEditor=true;
+			//
+		// layout manager
+			this.layoutmanager=true;
+			this.legacyObjects=false;
 
 		// nav
 			this.ulTopClass = '';
@@ -131,7 +135,7 @@ component extends="mura.cfobject" output="false" {
 				} else if ( !totalItems ) {
 					WriteOutput(dspNoItemsNotice());
 				} else {
-					include 'class_extensions/display/home/homeFeeds.cfm';
+					include 'content_types/page_home/includes/homeFeeds.cfm';
 				}
 			}
 
