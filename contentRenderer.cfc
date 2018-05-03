@@ -62,6 +62,12 @@ component extends="mura.cfobject" output="false" {
 			this.userToolsNotRegisteredLinkClass=this.customButtonClass;
 			this.userToolsEditProfileLinkClass=this.customButtonClass;
 			this.userToolsLogoutLinkClass=this.customButtonClassAlt;
+			this.navWrapperClass="box";
+			this.navFolderWrapperClass=this.navWrapperClass;
+			this.navCalendarWrapperClass=this.navWrapperClass;
+			this.navStandardWrapperClass=this.navWrapperClass;
+			this.navArchiveWrapperClass=this.navWrapperClass;
+			this.raterObjectWrapperClass=this.navWrapperClass;
 
 
 	// custom theme methods
