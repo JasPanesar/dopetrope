@@ -18,8 +18,8 @@
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet" />
 
 		<!-- Mura CSS -->
-		<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/mura.6.1.1.min.css" />
-		<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/mura.6.1.1.skin.css" />
+		<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/mura.7.0.min.css" />
+		<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/mura.7.0.skin.css" />
 
 		<!--- jQuery --->
 		<script src="#$.siteConfig('themeAssetPath')#/js/jquery.min.js"></script>
