@@ -17,9 +17,9 @@
 		<link rel="icon" href="#$.siteConfig('assetPath')#/images/favicon.ico" type="image/x-icon" />
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet" />
 
-		<!-- Mura CSS -->
-		<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/mura.6.1.1.min.css" />
-		<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/mura.6.1.1.skin.css" />
+		<!--- Mura CMS Base Styles--->
+		<!--- Optional: Mura CMS Skin Styles. Duplicate to your theme to customize, changing 'assetPath' to 'themeAssetPath' below. Don't forget to move, remove or replace sprite.png. --->
+		#$.outputMuraCSS(version="7.1", includeskin=true)#
 
 		<!--- jQuery --->
 		<script src="#$.siteConfig('themeAssetPath')#/js/jquery.min.js"></script>
